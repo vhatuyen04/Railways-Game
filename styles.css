@@ -1,0 +1,282 @@
+body {
+    background-image: url('starter_eng/pics/screens/thumbnail.png');
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #faf7f0;
+    font-family: Arial, sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+#main-menu.menu-screen {
+    align-self: center;
+}
+
+.menu-screen .title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #c4a265;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+}
+
+.name-input {
+    padding: 10px 20px;
+    font-size: 18px;
+    width: 300px;
+    border: 2px solid #c4a265;
+    border-radius: 25px;
+    margin-bottom: 40px;
+    color: #c4a265;
+    text-align: center;
+}
+
+.name-input::placeholder {
+    color: #d5c4a6;
+}
+
+.difficulty-section {
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.difficulty-title {
+    color: #b4b4b4;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.difficulty-buttons {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
+
+.difficulty-btn {
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: #e8ecd8;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.difficulty-btn:hover {
+    background-color: #d5dbc1;
+}
+
+.difficulty-btn.active {
+    background-color: #c4a265;
+    color: white;
+}
+
+.btn-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.btn-subtext {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.action-btn {
+    padding: 15px 40px;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.rules-btn {
+    background-color: #e8ecd8;
+    color: #666;
+}
+
+.start-btn {
+    background-color: #9fa4ac;
+    color: white;
+}
+
+.railway-track {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-image: repeating-linear-gradient(
+    90deg,
+    #c4a265 0px,
+    #c4a265 20px,
+    #d5c4a6 20px,
+    #d5c4a6 40px
+    );
+}
+
+
+.game-screen {
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.game-title {
+    font-size: 48px;
+    color: #c4a265;
+}
+
+.player-info {
+    font-size: 24px;
+    color: #333;
+}
+
+.player-info div {
+    margin: 10px 0;
+}
+
+.game-board {
+    width: 500px;
+    height: 500px;
+    background-color: #f0e8d8;
+    border: 4px solid #c4a265;
+    position: relative;
+}
+
+.game-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.grid-container {
+    display: grid;
+    gap: 2px;
+    border: 2px solid #c4a265;
+    margin-top: 20px;
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #f0e8d8;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    font-size: 36px;
+    color: #c4a265;
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.modal-content #go-back-btn-win {
+    background-color: #9fa4ac;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.modal-content #go-back-btn-over {
+    background-color: #9fa4ac;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.modal-content #go-back-btn:hover {
+    background-color: #7f8692;
+}
+
+.rules-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-self: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.rules-modal .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.rules-modal .modal-content h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.rules-modal .modal-content p {
+    font-size: 18px;
+    color: #555;
+}
+
+.rules-modal .modal-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.rules-modal .modal-content button {
+    background-color: #c4a265;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.rules-modal .modal-content button:hover {
+    background-color: #d5c4a6;
+}

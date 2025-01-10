@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Railways Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="main-menu" class="menu-screen">
+        <div class="title">RAILWAYS</div>
+
+        <input type="text" class="name-input" placeholder="WHO ARE YOU?" />
+
+        <div class="difficulty-section">
+            <div class="difficulty-title">SET THE DIFFICULTY!</div>
+            <div class="difficulty-buttons">
+                <button class="difficulty-btn active">
+                    <div class="btn-text">5 X 5</div>
+                    <div class="btn-subtext">EASY</div>
+                </button>
+                <button class="difficulty-btn">
+                    <div class="btn-text">7 X 7</div>
+                    <div class="btn-subtext">HARD</div>
+                </button>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button class="action-btn rules-btn">RULES</button>
+            <button class="action-btn start-btn">START GAME</button>
+        </div>
+
+    </div>
+
+    <div id="game-screen" class="game-screen hidden">
+        <div class="game-header">
+            <div class="game-title">RAILWAYS</div>
+            <div class="player-info">
+                <div>ROUTE DESIGNER: <span id="player-name">NAME</span></div>
+                <div>ELAPSED TIME: <span id="elapsed-time">00:00</span></div>
+            </div>
+        </div>
+        <canvas class = "game-board"></canvas>
+    </div>
+
+    <div class="modal hidden" id="game-win-modal">
+        <div class="modal-content">
+            <h2>Game Win</h2>
+            <p>Your time: <span id="total-time">00:00</span></p>
+            <button class="action-btn" id="go-back-btn-win">Go Back to Menu</button>
+        </div>
+    </div>
+
+    <div class="modal hidden" id="game-over-modal">
+        <div class="modal-content">
+            <h2>Game Over</h2>
+            <p>Run out of time!</p>
+            <button class="action-btn" id="go-back-btn-over">Go Back to Menu</button>
+        </div>
+    </div>
+    
+    <div class="rules-modal hidden">
+        <div class="modal-content">
+            <h2>Game Rules</h2>
+            <p>Here are the rules of the game:</p>
+            <ul>
+                <li>Left click on the cell to choose type of railway for that cell.</li>
+                <li>Right click on the cell to rotate the cell you just built.</li>
+                <li>There are some certain area, those you can not choose another types or can not build the railway at all.</li>
+                <li>For the railway you built, you win if you created a continuous circular railway line that reaches every place where the train can travel.</li>
+                <li>Build the railway before time is up.</li>
+                <li>Good luck!</li>
+            </ul>
+            <button id="close-rules-btn">Close</button>
+        </div>
+    </div>
+
+
+    <script src = "script.js"></script>
+    
+</body>
+</html>
